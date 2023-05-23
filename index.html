@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Space Invaders</title>
+	<style>
+		body {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			background-color: rgb(139, 148, 125);
+		}
+
+		#game {
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+			border: 3px double black;
+			border-radius: 5%;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.button {
+			width: 50px;
+			height: 50px;
+			margin: 20px;
+			border-radius: 50%;
+			background-color: red;
+			align-self: flex-end;
+			box-shadow:
+				inset 3px 5px 5px -1px rgb(255 255 255 / 50%),
+				inset -3px -3px 5px -1px rgb(0 0 0 / 99%),
+				1px 1px 1px 2px rgb(0 0 0 / 80%),
+				2.5px 5px 5px 1px rgb(0 0 0 / 90%)
+		}
+
+		.button>* {
+			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: rgb(133, 29, 29);
+		}
+
+		.button:active {
+			background-color: rgb(255, 60, 60);
+		}
+
+		.icon {
+			font-size: 30px;
+			margin-left: 10px;
+			margin-top: 11px;
+		}
+	</style>
+</head>
+
+<body style="overflow: hidden;">
+	<h2>Space Invaders</h2>
+	<h4>Level: <span class="level">1</span></h4>
+	<canvas id="game"></canvas>
+	<div class="container">
+		<span class="button next"><i class="material-icons icon">queue_play_next</i></span>
+		<span class="button retry"><i class="material-icons icon">refresh</i></span>
+	</div>
+	<script type="module" src="index.js"></script>
+</body>
+
+</html>
